@@ -28,7 +28,7 @@
         let producao_atual= ipt_producao.value*0.70
         let receita_atual = ipt_plantio.value * producao_atual * ipt_morango.value
         let lucro_atual = receita_atual - Number(ipt_irrigacao.value)
-        let perda= (ipt_producao.value*0.30)*lucro_atual
+        let perda= (ipt_producao.value*0.30)*receita_atual
 
         //Calculo da economia de agua baseado na porcentagem do site canal rural 
         let economia_agua = ipt_irrigacao.value * 0.20
@@ -53,18 +53,18 @@
         Custo com AgroSense: R$${novo_gasto_irri.toFixed(2)} <br>
         lucro com AgroSense: R$${novo_lucro.toFixed(2)} <br><br>
 
-        <b>O AgroSense faria você ganhar R$${diferenca.toFixed(2)} a mais por mês,
-         resolvendo seus problemas de morangos perdidos pelas doenças, ajudando a <br> 
-         produzir 30% a mais e reduzindo seus gastos com irrigação em 20%.</b>`
+        <b>O AgroSense faria você ganhar R$${diferenca.toFixed(2)} a mais por mês, ou seja,<br>
+       R$${(diferenca*12).toFixed(2)} por ano, resolvendo seus problemas de morangos perdidos pelas<br> 
+       doenças, ajudando a produzir 30% a mais e reduzindo seus gastos com irrigação em 20%.</b>`
            
         
 
     }
 
-    ipt_irrigacao.value=0
-    ipt_morango.value=0
-    ipt_plantio.value=0
-    ipt_producao.value=0
+    ipt_irrigacao.value=''
+    ipt_morango.value=''
+    ipt_plantio.value=''
+    ipt_producao.value=''
 </script>
 
 </html>
