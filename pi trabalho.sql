@@ -39,7 +39,7 @@ porcentagem_umidade float (5,2) not null
 insert into cadastro(nome_da_empresa, data_cadastro,sts_plano, Aceite_dos_termos) values ('AgroSense', '2026-03-03', 'Ativo', 1);
 
 
--- ----- Script de Query -----
+-- ----- Script de Query ------
 select *, case
 when aceite_dos_termos = 1 then 'Aceitou'
 else 'Não aceitou'
