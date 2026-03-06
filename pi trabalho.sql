@@ -18,12 +18,14 @@ id int primary key auto_increment,
 nome_da_empresa Varchar(50)not null,
 data_cadastro date not null,
 sts_plano Varchar (30), constraint chkStatus check(sts_plano in('Ativo', 'Teste', 'Cancelado')),
-aceite_dos_termos tinyint (1) not null
-) ;
+aceite_dos_termos tinyint (1) not null,
+telefone varchar(20) not null
+);
 
 create table informacao_do_cliente (
 id int primary key auto_increment,
 nome_da_empresa Varchar (50) not null,
+cnpj Varchar (20),
 telefone varchar(20) not null,
 email Varchar(50) not null,
 cidade_e_estado varchar (70) not null
@@ -46,20 +48,20 @@ porcentagem_umidade decimal (5,2) not null
 
 -- inserindo dados
 insert into cadastro values
-(default, 'JBS','2026-01-02','Ativo',1),
-(default, 'Raízen','2025-06-14','Ativo',1),
-(default, 'Agromania','2025-03-30','Cancelado',0),
-(default, 'Sítio Oliveira','2026-02-08','Teste',1),
-(default, 'Ferreira´s Agro','2026-01-11','Ativo',0);
+(default, 'JBS','2026-01-02','Ativo',1,'1190028922'),
+(default, 'Raízen','2025-06-14','Ativo',1,'1198987676'),
+(default, 'Agromania','2025-03-30','Cancelado',0,'1192987059'),
+(default, 'Sítio Oliveira','2026-02-08','Teste',1,'1198388831'),
+(default, 'Ferreira´s Agro','2026-01-11','Ativo',0,'1198886611');
 
 insert into informacao_do_cliente values
-(default,'JBS','1140028922','jbs@gmail.com','Guarulhos,SP'),
-(default,'Raízen','1198987676','raizen@gmail.com','Parati,RJ'),
-(default,'Agromania','1192987059','agromania@gmail.com','São Bernardo,SP'),
-(default,'Sítio Oliveira','1198388831','st.oliveira@gmail.com','Araraquara,SP'),
-(default,'Ferreira´s Agro','1198886611','ferreira.agro@gmail.com','São Carlos,RJ');
+(default,'JBS', '33445468910023','1190028922','jbs@gmail.com','Guarulhos,SP'),
+(default,'Raízen','12332144557682','1198987676','raizen@gmail.com','Parati,RJ'),
+(default,'Agromania','88779909028145','1192987059','agromania@gmail.com','São Bernardo,SP'),
+(default,'Sítio Oliveira','14357869942132','1198388831','st.oliveira@gmail.com','Araraquara,SP'),
+(default,'Ferreiras Agro','66745321987008','1198886611','ferreira.agro@gmail.com','São Carlos,RJ');
 
-insert into informcao_da_plantação values
+insert into informacao_da_plantacao values
 (default,'JBS',5,7500,5000),
 (default,'Raízen',10,15000,10000),
 (default,'Agromania',4,6800,4000),
@@ -75,7 +77,7 @@ insert into dados_do_sensor values
 
 
 -- ----- Script de Query ------
-select *, case
+select id, nome_da_empresa, data_cadastro, sts_plano,  case
 when aceite_dos_termos = 1 then 'Aceitou'
 else 'Não aceitou'
 end as termos_de_uso
@@ -84,6 +86,7 @@ from cadastro;
 Select *, case
 when porcentagem_umidade <65 THEN 'ALERTA DE SOLO SECO'
 When porcentagem_umidade >75 THEN 'ALERTA DE EXCESSO DE ÁGUA'
+When porcentagem_umidade ='' THEN 'ALERTA SENSOR COM DEFEITO'
 else 'UMIDADE ESTÁ NO NÍVEL CORRETO'
 end as status_umidade
 FROM dados_do_sensor;
@@ -91,7 +94,7 @@ FROM dados_do_sensor;
 
 select * from informacao_do_cliente;
 
-select * from infromcao_da_plantacao;
+select * from informacao_da_plantacao;
 
 
 
