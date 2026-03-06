@@ -1,11 +1,11 @@
 /*
 GRUPO 06 - 1SIS
-HENRIQUE REZENDE
-JONAS FERNANDES
-LUCAS GALVAO
-LUIZ SOBRINHO
-MARCUS VINICIUS
-MATHEUS ANJOS
+HENRIQUE REZENDE RA: 03261008
+JONAS FERNANDES RA: 03261
+LUCAS GALVAO RA: 03261018
+LUIZ SOBRINHO RA: 03261
+MARCUS VINICIUS RA: 03261
+MATHEUS ANJOS RA: 03261
 */
 
 create database AgroSense;
@@ -77,7 +77,11 @@ insert into dados_do_sensor values
 
 
 -- ----- Script de Query ------
+<<<<<<< HEAD
 select id, nome_da_empresa, data_cadastro, sts_plano,  case
+=======
+select id, nome_da_empresa, data_cadastro, sts_plano, case
+>>>>>>> d120d57991e98278089a4650fd83fb6a2132a08e
 when aceite_dos_termos = 1 then 'Aceitou'
 else 'Não aceitou'
 end as termos_de_uso
@@ -91,11 +95,14 @@ else 'UMIDADE ESTÁ NO NÍVEL CORRETO'
 end as status_umidade
 FROM dados_do_sensor;
 
-
 select * from informacao_do_cliente;
 
+<<<<<<< HEAD
 select * from informacao_da_plantacao;
 
 
 
 
+=======
+select * from informacao_da_plantacao;
+>>>>>>> d120d57991e98278089a4650fd83fb6a2132a08e
