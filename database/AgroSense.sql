@@ -80,4 +80,4 @@ INSERT INTO capturaDoSensorUmidade (porcentagem, fkSensor) VALUES
 (default, 5);
 
 
-select*from capturaDoSensorUmidade;
+select*from capturaDoSensorUmidade;gu
