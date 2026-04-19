@@ -11,10 +11,11 @@
     background-color: #006852;
     height: 70px;
     color: white;
-    font-size: 30px; 
+    font-size: 30px;
     display: flex;
     align-items: center;
-    justify-content: center; /* centraliza o título */
+    justify-content: center;
+    /* centraliza o título */
     position: relative;
 }
 
@@ -28,6 +29,13 @@
 .voltar {
     position: absolute;
     right: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.voltar:hover {
+    opacity: 0.8;
 }
 
 main {
@@ -61,7 +69,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
+   
 }
 
 .ipt_com_titulo {
@@ -74,12 +82,8 @@ input {
     height: 50px;
     border: solid #00000062 2px;
     border-radius: 25px;
-
-
-}
-
-input::placeholder {
     padding-left: 20px;
+    font-size: 16px;
 }
 
 .btn_calcular {
@@ -103,10 +107,11 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .caixa_analise {
-    gap: 10px;
+    gap: 20px;
 }
 
 .texto_olhometro {
@@ -135,4 +140,16 @@ input::placeholder {
 .texto_aumento_porcentagem {
 
     color: #12a149;
+}
+
+#dv_msg {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 16px;
 }
