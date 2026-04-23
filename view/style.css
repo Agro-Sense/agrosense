@@ -386,7 +386,7 @@ header {
     height: 70px;
     width: 200px;
     display: flex;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
 }
 
@@ -394,12 +394,12 @@ header {
     display: flex;
     flex-direction: column;
     font-weight: 400;
-    letter-spacing: 2px;
     font-size: 20px;
     font-family: "Poppins", sans-serif;
     color: #ffffff;
     justify-content: center;
-    display: flex;
     text-align: center;
+    align-items: center;
+    padding-left: 40px;
 
 }
