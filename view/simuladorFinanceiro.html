@@ -106,6 +106,11 @@
         // porcentagem de rentabilidade
         let aumento_rentabilidade = ((novo_lucro - lucro_atual) / lucro_atual) * 100;
 
+if (ipt_morango.value <= 0 || ipt_plantio.value <= 0 || ipt_producao.value <=0 || ipt_irrigacao.value <= 0){
+        alert ("Insira um valor positivo")
+
+} else {
+
         dv_msg.innerHTML = `
         Custo com irrigação: R$${Number(ipt_irrigacao.value).toFixed(2)} <br>
         Lucro atual: R$${lucro_atual.toFixed(2)} <br>
@@ -122,4 +127,6 @@
 
         rentabilidade.innerHTML = `<p class="texto_aumento_porcentagem">Aumento de ${aumento_rentabilidade.toFixed(2)}% na rentabilidade</p>`
     }
+    }
 </script>
+ 
