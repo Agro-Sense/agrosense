@@ -27,8 +27,15 @@ function Registrar() {
         ipt_Empresa.value = "";
         ipt_User.value = "";
         ipt_Senha_User.value = "";
+         window.location = 'login.html';
     }
 }
+
+function irLogin() {
+    console.log(listaUsuarios);
+    window.location = 'login.html';
+}
+
 
 function Validar() {
     var userLogin = ipt_Login_User.value.toLowerCase();
