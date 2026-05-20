@@ -16,7 +16,7 @@ body {
 }
 
 .inicial {
-    background-image: url(./imgs/fundo3.png);
+    background-image: url(../imgs/fundo3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
