@@ -2,33 +2,45 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="../view/css/site.css">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
 
 <body>
-    <main class="cadastro">
-        <div id="tela_login" class="div_tela_cadastro_login">
-            <div class="display">
-                <h2 class="tituloAgroSense">AgroSense</h2> <br>
-                <h3>Login</h3> <br>
-                Usuário: <br>
-                <input class='ipt' type="text" id="ipt_Login_User" placeholder="josé@morangos.silvestres.com"> <br><br>
-                Senha: <br>
-                <input class='ipt' type="password" id="ipt_Login_Senha" placeholder="senhasilvestres"> <br><br>
+    <section class="pagina inicial">
+        <header>
+            <nav class="barra">
+                <ul class="topicos-barra">
+                    <li class="logo-menu"><img src="./imgs/logoAgroSense.png" alt="" class="logoAgroSense">AgroSense</li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#SobreNos">Sobre nós</a></li>
+                    <li><a href="index.html#oferecimento">O que oferecemos</a></li>
+                    <li><a href="simuladorFinanceiro.html" target="_blank">Simulador financeiro</a></li>
+                    <li><a href="index.html#suporte">Suporte</a></li>
+                    <li><a href="siteEstaticoCadastro.html">Cadastrar</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
 
-                <button id="button_registro" onclick="Validar()">Entrar</button> <br><br>
-                <a class='acesso' href="siteEstaticoCadastro.html" target="">Não tem conta? Cadastre-se</a>
+        <main class="cadastro">
+            <div id="tela_login" class="div_tela_cadastro_login">
+                <div class="display">
+                    <h2 class="tituloAgroSense">AgroSense</h2><br>
+                    <h3>Login</h3><br>
+                    Usuário:<br>
+                    <input class='ipt' type="text" id="ipt_Login_User" placeholder="josé@morangos.silvestres.com"><br><br>
+                    Senha:<br>
+                    <input class='ipt' type="password" id="ipt_Login_Senha" placeholder="senhasilvestres"><br><br>
+                    <button id="button_registro" onclick="Validar()">Entrar</button><br><br>
+                    <a class='acesso' href="siteEstaticoCadastro.html">Não tem conta? Cadastre-se</a>
+                </div>
             </div>
-        </div>
+        </main>
+    </section>
 
-
-    </main>
-
-    <br>
     <div id="div_msg"></div>
+    <script src="./js/siteEstatico.js"></script>
 </body>
-
-<script src="../view/js/siteEstatico.js">
-</script>
