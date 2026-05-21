@@ -172,9 +172,9 @@ header {
     padding: 5px;
     width: 120px;
     align-items: center;
-    position: absolute;
-    right: 32%;
-    top: 29%;
+    position: relative;
+    right: 22%;
+    top: -385px;
 
 }
 
