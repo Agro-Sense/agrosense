@@ -1,3 +1,6 @@
 [submodule "web-data-viz"]
 	path = web-data-viz
 	url = https://github.com/BandTec/web-data-viz.git
+[submodule "BobInteligente"]
+	path = BobInteligente
+	url = https://github.com/BandTec/BobIA.git
