@@ -1,195 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.barradashboard {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-size: 16px;
-    display: flex;
-    width: 50%;
-    background-color: #28631d;
-    justify-content: center;
-    height: 60px;
-    border-radius: 50px;
-    margin: 20px auto;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f0e8;
+  min-height: 100vh;
 }
 
+/* ===================== SIDEBAR ===================== */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 240px;
-    height: 100vh;
-    background-color: #6bad60;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #6bad60;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  z-index: 1000;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
 }
 
-.sidebar .sidebar-footer .btn-sair {
-    font-size: 20px;
-    font-weight: 800;
-    color: #b91f1f;
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.sidebar .sidebar-footer .btn-sair:hover {
-    color: white;
-    transform: scale(1.1);
-    transition: 0.3s;
+.logo-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .logo-sidebar h2 {
-    color: white;
-    margin-bottom: 40px;
-    text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 
 .menu-itens {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
 }
 
 .menu-itens a {
-    color: #353734;
-    padding: 12px 15px;
-    border-radius: 8px;
-    transition: 0.3s;
+  color: #e8f5e5;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .menu-itens a:hover,
 .menu-itens a.active {
-    background-color: #3a822d;
-    color: white;
+  background-color: #3a822d;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar-footer .btn-sair {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(185, 31, 31, 0.3);
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.sidebar-footer .btn-sair:hover {
+  background-color: #b91f1f;
+  transform: scale(1.03);
+}
+
+/* ===================== HEADER ===================== */
+header {
+  margin-left: 240px;
+}
+
+.barradashboard {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  width: 70%;
+  background-color: #28631d;
+  justify-content: center;
+  height: 60px;
+  border-radius: 50px;
+  margin: 20px auto;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 12px rgba(40, 99, 29, 0.3);
 }
 
 .tituloDashboard {
-    text-align: center;
+  text-align: center;
+  font-weight: 500;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    background-size: cover;
-    background-color: beige;
+/* ===================== MAIN CONTENT AREA ===================== */
+.main-dashboard {
+  margin-left: 240px;
+  padding: 0 30px 40px 30px;
 }
 
-.titulo-grafico {
-    font-family: "Poppins", sans-serif;
-    color: #353734;
-    font-size: 16px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.total-graficos {
-    margin-right: 360px;
-
-}
-
-.estilo-grafico1 {
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding-left: 330px;
-}
-
-.estilo-grafico2 {
-    padding: 80px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding-top: 0%;
-    padding-left: 330px;
-}
-
+/* ===================== KPI CARDS ===================== */
 .allkpi {
-    position: fixed;
-    top: 120px;
-    right: 20px;
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 999;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .kpi_1,
-.kpi_4 {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #6bad60;
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 350;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0;
-}
-
 .kpi_2,
-.kpi_3 {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #df6a6a;
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 350;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0;
+.kpi_3,
+.kpi_4,
+.kpi_5 {
+  flex: 1 1 180px;
+  border-radius: 15px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  color: white;
+  line-height: 1.5;
 }
 
-.kpi_5 {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #f9bb70;
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 350;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0;
+.kpi_1, .kpi_4 { background-color: #6bad60; }
+.kpi_2, .kpi_3 { background-color: #df6a6a; }
+.kpi_5         { background-color: #f0a030; }
+
+/* ===================== CHARTS GRID ===================== */
+.total-graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 .card-grafico {
-    background-color: white;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 330px;
-    position: relative;
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-grafico {
+  font-family: "Poppins", sans-serif;
+  color: #28631d;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 280px;
+  width: 100%;
 }

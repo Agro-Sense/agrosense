@@ -7,7 +7,7 @@
   <title>AgroSense - Perfil do Usuário</title>
   <link rel="stylesheet" href="../view/css/perfil.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,17 +17,17 @@
       <h2>AgroSense</h2>
       <nav class="menu-itens">
         <a href="chart_dashboard.html">Dashboard</a>
-        <a href="#" class="active">Perfil</a>
+        <a href="perfil.html" class="active">Perfil</a>
       </nav>
       <div class="sidebar-footer">
-        <a href="../view/login.html" class="btn-sair">Sair</a>
+        <a href="login.html" class="btn-sair">Sair</a>
       </div>
     </div>
   </aside>
 
   <header>
     <nav class="barradashboard">
-      <span class="tituloDashboard">Olá José! Seja bem-vindo ao Painel de Indicadores de Desempenho da sua Plantação</span>
+      <span>Olá, Fernanda Caramico! Bem-vindo ao Painel de Indicadores da sua Plantação</span>
     </nav>
   </header>
 
@@ -88,12 +88,59 @@
 
         <div class="sensores-resumo">
           <div class="sensor-stat total">
-            <span class="numero">10</span>
+            <span class="numero">5</span>
             <span class="descricao">Total</span>
           </div>
-        
+          <div class="sensor-stat ativos">
+            <span class="numero">3</span>
+            <span class="descricao">Ativos</span>
+          </div>
+          <div class="sensor-stat inativos">
+            <span class="numero">2</span>
+            <span class="descricao">Inativos</span>
+          </div>
+        </div>
 
+        <div class="sensores-lista-titulo">Lista de Sensores</div>
 
+        <div class="sensor-item">
+          <div class="sensor-info">
+            <span class="sensor-id">SENSOR_UMID_001</span>
+            <span class="sensor-local">Setor A - Bloco Norte</span>
+          </div>
+          <span class="sensor-badge inativo">Inativo</span>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-info">
+            <span class="sensor-id">SENSOR_UMID_002</span>
+            <span class="sensor-local">Setor A - Bloco Sul</span>
+          </div>
+          <span class="sensor-badge ativo">Ativo</span>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-info">
+            <span class="sensor-id">SENSOR_UMID_003</span>
+            <span class="sensor-local">Setor B - Bloco Leste</span>
+          </div>
+          <span class="sensor-badge ativo">Ativo</span>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-info">
+            <span class="sensor-id">SENSOR_UMID_004</span>
+            <span class="sensor-local">Setor B - Bloco Oeste</span>
+          </div>
+          <span class="sensor-badge inativo">Inativo</span>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-info">
+            <span class="sensor-id">SENSOR_UMID_005</span>
+            <span class="sensor-local">Setor C - Central</span>
+          </div>
+          <span class="sensor-badge ativo">Ativo</span>
+        </div>
+      </div>
     </div>
+  </div>
+
 </body>
 </html>
